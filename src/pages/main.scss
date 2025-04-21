@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    box-shadow: -1px 2px 11px 0px rgba(0, 0, 0, 0.26);
+    -webkit-box-shadow: -1px 2px 11px 0px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: -1px 2px 11px 0px rgba(0, 0, 0, 0.26);
+    z-index: 10000;
+
+    .headercontainer {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+
+            h2 {
+                font-weight: 500;
+                font-size: 24px;
+
+                span {
+                    color: #4232C2;
+                }
+            }
+        }
+
+        .navbar {
+            display: flex;
+            width: 50%;
+            justify-content: space-between;
+
+            a {
+                text-decoration: none;
+                color: #0000008C;
+                padding: 8px;
+                font-size: 16px;
+                &:hover{
+                    background-color: #4232C2;
+                    color: white;
+                    padding: 8px;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .navicons {
+            display: flex;
+            align-items: center;
+            font-size: 23px;
+            color: #4232C2;
+            gap: 30px;
+        }
+        .bars{
+            display: none;
+        }
+    }
+}
+
+
+.getstarted{
+    width: 100%;
+    height: 650px;
+    background-image: url(https://themewagon.github.io/purple-buzz/assets/img/banner-bg-01.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .startedtext{
+        width: 60%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        h1{
+            color: #6266EA;
+            font-size: 60px;
+            font-weight: 300;
+        }
+        p{
+            color: #6C757D;
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            border: 1px solid #4232C2;
+            border-radius: 25px;
+            color: #4232C2;
+            background: none;
+            font-size: 20px;
+            font-weight: 400;
+            &:hover{
+                cursor: pointer;
+                background-color: #4232C2;
+                color: white;
+            }
+        }
+    }
+}
+
+.services{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    .servicescontainer{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        h1{
+            font-weight: 500;
+            text-align: center;
+        }
+        span{
+            font-size: 28px;
+            
+        }
+        p{
+            color: #6C757D;
+            text-align: justify;
+        }
+   }
+}
+
+.category{
+    width: 100%;
+    background-color: #6266EA;
+    height: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .categorycontainer{
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        .all{
+            background-color: #4232C2;
+            padding: 10px 25px;
+            border-radius: 25px;
+        }
+        span{
+            color: #F6F9FE;
+            font-weight: 300;
+            padding: 10px 25px;
+            border-radius: 25px;
+            &:hover{
+                background-color: #4232C2;
+            }
+        }
+    }
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  
+    .cardscontainer {
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 50px;
+      .card {
+        width: 22%;
+        height: 255px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-self: flex-end;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 25px;
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.2);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          z-index: 1;
+        }
+  
+        &:hover::before {
+          opacity: 1;
+        }
+  
+        .cardtxt {
+          position: relative;
+          z-index: 2;
+          padding: 10px;
+  
+          span {
+            border: 1px solid white;
+            padding: 5px 20px;
+            border-radius: 25px;
+            color: white;
+          }
+  
+          p {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  
+
+  .view{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6266EA;
+    .viewcontainer{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .box{
+            color: white;
+            font-size: 60px;
+        }
+        .viewtxt{
+            width: 50%;
+            color: white;
+            h4{
+                font-weight: 400;
+                font-size: 20px;
+            }
+        }
+        button{
+            width: 150px;
+            height: 45px;
+            background-color: #4232C2;
+            border: none;
+            border-radius: 25px;
+            color: white;
+        }
+    }
+  }
+
+@media screen and (min-width:320px) and (max-width:480px){
+    header{
+        .headercontainer{
+            width: 90%;
+            .logo{
+                h2{
+                    font-size: 22px;
+                }
+            }
+            .navbar{
+                display: none;
+            }
+            .navicons{
+                display: none;
+            }
+            .bars{
+                display: block;
+                font-size: 20px;
+                color: #0000008C;
+            }
+        }
+    }
+    
+.getstarted{
+    width: 100%;
+    height: 600px;
+    background-image: url(https://themewagon.github.io/purple-buzz/assets/img/banner-bg-01.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .startedtext{
+        width: 80%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        
+        h1{
+            color: #6266EA;
+            font-size: 25px;
+            font-weight: 300;
+        }
+       
+    }
+}
+}
+
+@media screen and (min-width:481px) and (max-width:768px){
+    header{
+        .headercontainer{
+            width: 90%;
+            .logo{
+                h2{
+                    font-size: 22px;
+                }
+            }
+            .navbar{
+                display: none;
+            }
+            .navicons{
+                display: none;
+            }
+            .bars{
+                display: block;
+                font-size: 20px;
+                color: #0000008C;
+            }
+        }
+    }
+    .getstarted{
+        width: 100%;
+        height: 600px;
+        background-image: url(https://themewagon.github.io/purple-buzz/assets/img/banner-bg-01.jpg);
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .startedtext{
+            width: 80%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            h1{
+                color: #6266EA;
+                font-size: 45px;
+                font-weight: 300;
+            }
+           
+        }
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:995px){
+    header{
+        .headercontainer{
+            width: 90%;
+            .logo{
+                h2{
+                    font-size: 22px;
+                }
+            }
+            .navbar{
+                display: none;
+            }
+            .navicons{
+                display: none;
+            }
+            .bars{
+                display: block;
+                font-size: 20px;
+                color: #0000008C;
+            }
+        }
+    }
+    .getstarted{
+        width: 100%;
+        height: 600px;
+        background-image: url(https://themewagon.github.io/purple-buzz/assets/img/banner-bg-01.jpg);
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .startedtext{
+            width: 80%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            h1{
+                color: #6266EA;
+                font-size: 55px;
+                font-weight: 300;
+            }
+           
+        }
+    }
+}
